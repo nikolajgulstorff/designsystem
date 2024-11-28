@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Seo from "../layouts/SEO.astro";
+import Intro from "../layouts/Intro.astro";
 import Anmeldelser from "../components/Anmeldelser.astro";
 import Infomde from "../components/Infomøde.astro";
 import Button from '../components/Button.astro';
@@ -9,6 +10,9 @@ import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 ---
 <MainLayout title="Höjskole">
+
+   <Intro />
+   
    <Anmeldelser
    img="../portraits/Sofie.png"
    citat="Det bedste eventyr"
