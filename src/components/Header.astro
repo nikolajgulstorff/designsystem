@@ -1,7 +1,7 @@
 ---
 ---
 <div x-data="{ showmenu: false }" class="fixed lg:static w-full shadow-md">
-    <div id="navbar" class=" bg-white flex absolute flex-row items-center w-full px-4 py-4 z-10">
+    <div id="navbar" class=" bg-white flex flex-row items-center w-full px-4 py-4 z-10">
         <!-- Logo Section -->
         <div id="logo">
             <a href="index.html"><img src="/public/svg/logo2.svg" alt="hjem" class="h-16"></a>
@@ -98,14 +98,14 @@
         </div>
 
         <!-- Burger Menu Button for Mobile -->
-        <button id="burgermenu" class="ml-auto lg:hidden text-black-500 focus:outline-none" x-on:click="showmenu = !showmenu">
+        <button id="burgermenu" class="ml-auto lg:hidden z-30 text-black-500 focus:outline-none" x-on:click="showmenu = !showmenu">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
             </svg>
         </button>
     </div>
 
-    <nav id="mobilmenu" class="lg:hidden bg-black-500 flex flex-col items-center w-full py-4 space-y-4 border-t border-white" 
+    <nav id="mobilmenu" class="lg:hidden bg-black-500 flex z-20 flex-col items-center w-full py-4 space-y-4 border-t border-white" 
     x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false"> <!-- Skjult tilstand indtil åbnet -->
     <ul class="w-full">
         <li class="text-center py-xxs">
