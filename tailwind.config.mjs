@@ -73,8 +73,8 @@ export default {
         base: ['1rem', { lineHeight: '24px' }],
         medium: ['1.625rem', { lineHeight: '32px' }],
         large: ['2.625rem', { lineHeight: '40px' }],
-        xlarge: ['4.25rem', { lineHeight: '48px' }],
-        x2large: ['6.875rem', { lineHeight: '48px' }],
+        xlarge: ['4.25rem', { lineHeight: '80px' }],
+        x2large: ['6.875rem', { lineHeight: '64px' }],
       },
       fontWeight: {
         light: '300',
