@@ -2,7 +2,6 @@
 export default {
   content: [
     './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}', // Projektets filer
-    './node_modules/flowbite/**/*.js', // Flowbite-modulindhold
   ],
 
   theme: {
@@ -105,6 +104,5 @@ export default {
     require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/container-queries'),
-    require('flowbite/plugin'),
   ],
 };
