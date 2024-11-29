@@ -14,11 +14,11 @@ const { img, citat, dato, læsmere, stars, name, description} = Astro.props
     </div>
 
     <!-- Second Section -->
-    <div class="flex flex-col bg-orange-50 p-xs w-full">
+    <div class="flex flex-col bg-orange-50 p-xs w-full min-h-48">
         <p class="pb-xs"><span class="font-bold">{name}</span> {description}</p>
-        <div class="flex justify-between">
+        <div class="flex justify-between items-end mt-auto">
             <p>{dato}</p>
-            <a href={læsmere}>Læs mere</a>
+            <a href={læsmere} class="text-orange-500 font-bold">Læs mere</a>
         </div>
     </div>
 </div>
