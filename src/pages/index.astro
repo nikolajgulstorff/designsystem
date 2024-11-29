@@ -4,18 +4,22 @@ import Seo from "../layouts/SEO.astro";
 import Intro from "../layouts/Intro.astro";
 import Anmeldelser from "../components/Anmeldelser.astro";
 import Infomde from "../components/Infomøde.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
+import Herovideo from "../components/Herovideo.astro";
+import Anmeldsektion from "../layouts/Anmeldsektion.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 import Travelcard from "../components/Travelcard.astro";
 ---
+
 <MainLayout title="Höjskole">
 
    <Travelcard />
 
    
-   <Intro />
+   <Herovideo />
+  <Intro />
 
    <Anmeldelser
    img="../portraits/Sofie.png"
@@ -66,6 +70,6 @@ import Travelcard from "../components/Travelcard.astro";
    
    <Infomde />
   
-<!--    <script src="../path/to/flowbite/dist/flowbite.min.js"></script> -->
-  
+
+
 </MainLayout>

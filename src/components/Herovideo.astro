@@ -1,0 +1,40 @@
+---
+import Button from "./Button.astro";
+---
+
+<div class="heroVideo">
+  <video autoplay muted loop>
+    <source
+      src="https://saaa.dk/kea/dide_grp13/hojskolendk.webm"
+      type="video/webm"
+    />
+  </video>
+  <div class="knap">
+    <Button variant="primary" size="large">Vælg dit næste eventyr</Button>
+  </div>
+</div>
+
+<style>
+  .heroVideo {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .heroVideo video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .knap {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+</style>
