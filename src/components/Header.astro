@@ -1,131 +1,333 @@
 ---
+
 ---
+
 <div x-data="{ showmenu: false }" class="fixed lg:static w-full shadow-md">
-    <div id="navbar" class=" bg-white flex absolute flex-row items-center w-full px-4 py-4 z-10">
-        <!-- Logo Section -->
-        <div id="logo">
-            <a href="index.html"><img src="/public/svg/logo2.svg" alt="hjem" class="h-16"></a>
-        </div>
-
-        <!-- Desktop Navigation -->
-        <nav id="desktopmenu" class="hidden lg:flex ml-auto">
-            <ul class="flex flex-row space-x-6">
-                <!-- Dropdown Container -->
-                <li class="relative" 
-                    x-data="{ dropdown: false }"
-                    @mouseenter="dropdown = true" 
-                    @mouseleave="dropdown = false">
-                    <button class="text-black-500 font-title text-base font-bold hover:text-orange-500 flex items-center">
-                        HØJSKOLEOPHOLD
-                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <!-- Dropdown Menu -->
-                    <div x-show="dropdown" x-transition class="absolute left-0 mt-2 bg-white shadow-md rounded-md w-48">
-                        <a href="#option1" class="block px-4 py-2 text-black-500 hover:bg-orange-100">Option 1</a>
-                        <a href="#option2" class="block px-4 py-2 text-black-500 hover:bg-orange-100">Option 2</a>
-                        <a href="#option3" class="block px-4 py-2 text-black-500 hover:bg-orange-100">Option 3</a>
-                        <a href="#option4" class="block px-4 py-2 text-black-500 hover:bg-orange-100">Option 4</a>
-                    </div>
-                </li>
-
-                <li class="relative" 
-                x-data="{ dropdown: false }"
-                @mouseenter="dropdown = true" 
-                @mouseleave="dropdown = false">
-                <button class="text-black-500 font-title text-base font-bold hover:text-orange-500 flex items-center">
-                    SOMMERHØJSKOLE  
-                    <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </button>
-                <!-- Dropdown Menu -->
-                <div x-show="dropdown" x-transition class="absolute left-0 mt-2 bg-white shadow-md rounded-md w-48">
-                    <a href="#option1" class="block px-4 py-2 text-black-500 hover:bg-orange-100">Option 1</a>
-                    <a href="#option2" class="block px-4 py-2 text-black-500 hover:bg-orange-100">Option 2</a>
-                    <a href="#option3" class="block px-4 py-2 text-black-500 hover:bg-orange-100">Option 3</a>
-                    <a href="#option4" class="block px-4 py-2 text-black-500 hover:bg-orange-100">Option 4</a>
-                </div>
-            </li>
-
-            <li class="relative" 
-            x-data="{ dropdown: false }"
-            @mouseenter="dropdown = true" 
-            @mouseleave="dropdown = false">
-            <button class="text-black-500 font-title text-base font-bold hover:text-orange-500 flex items-center">
-                OM OS
-                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-            </button>
-            <!-- Dropdown Menu -->
-            <div x-show="dropdown" x-transition class="absolute left-0 mt-2 bg-white shadow-md rounded-md w-48">
-                <a href="#option1" class="block px-4 py-2 text-black-500 hover:bg-orange-100">Option 1</a>
-                <a href="#option2" class="block px-4 py-2 text-black-500 hover:bg-orange-100">Option 2</a>
-                <a href="#option3" class="block px-4 py-2 text-black-500 hover:bg-orange-100">Option 3</a>
-                <a href="#option4" class="block px-4 py-2 text-black-500 hover:bg-orange-100">Option 4</a>
-            </div>
-        </li>
-        <li class="relative" 
-        x-data="{ dropdown: false }"
-        @mouseenter="dropdown = true" 
-        @mouseleave="dropdown = false">
-        <button class="text-black-500 font-title text-base font-bold hover:text-orange-500 flex items-center">
-            TILMELD
-            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-        </button>
-        <!-- Dropdown Menu -->
-        <div x-show="dropdown" x-transition class="absolute left-0 mt-2 bg-white shadow-md rounded-md w-48">
-            <a href="#option1" class="block px-4 py-2 text-black-500 hover:bg-orange-100">Option 1</a>
-            <a href="#option2" class="block px-4 py-2 text-black-500 hover:bg-orange-100">Option 2</a>
-            <a href="#option3" class="block px-4 py-2 text-black-500 hover:bg-orange-100">Option 3</a>
-            <a href="#option4" class="block px-4 py-2 text-black-500 hover:bg-orange-100">Option 4</a>
-        </div>
-    </li>
-                <li><a href="#tilmeld" class="text-black-500 font-title text-base font-bold hover:text-orange-500">PRISER</a></li>
-                <li><a href="#infomoeder" class="text-black-500 font-title text-base font-bold hover:text-orange-500">INFOMØDER</a></li>
-            </ul>
-        </nav>
-
-        <!-- Icons aligned right -->
-        <div class="hidden lg:flex flex-row ml-4 space-x-4">
-            <a href="index.html"><img src="/public/svg/Facebook.svg" alt="hjem" class="h-6"></a>
-            <a href="index.html"><img src="/public/svg/Instagram.svg" alt="hjem" class="h-6"></a>
-            <a href="index.html"><img src="/public/svg/Tiktok.svg" alt="hjem" class="h-6"></a>
-        </div>
-
-        <!-- Burger Menu Button for Mobile -->
-        <button id="burgermenu" class="ml-auto lg:hidden z-30 text-black-500 focus:outline-none" x-on:click="showmenu = !showmenu">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
-        </button>
+  <div
+    id="navbar"
+    class="bg-white flex absolute flex-row items-center w-full px-4 py-4 z-10"
+  >
+    <!-- Logo Section -->
+    <div id="logo">
+      <a href="index.html"
+        ><img src="/svg/logo2.svg" alt="hjem" class="h-16" /></a
+      >
     </div>
 
-    <nav id="mobilmenu" class="lg:hidden bg-black-500 flex z-20 flex-col items-center w-full py-4 space-y-4 border-t border-white" 
-    x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false"> <!-- Skjult tilstand indtil åbnet -->
+    <!-- Desktop Navigation -->
+    <nav id="desktopmenu" class="hidden lg:flex ml-auto">
+      <ul class="flex flex-row space-x-6">
+        <!-- Dropdown Container -->
+        <li
+          class="relative"
+          x-data="{ dropdown: false }"
+          @mouseenter="dropdown = true"
+          @mouseleave="dropdown = false"
+        >
+          <button
+            class="text-black-500 font-title text-base font-bold hover:text-orange-500 flex items-center"
+          >
+            HØJSKOLEOPHOLD
+            <svg
+              class="ml-2 w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <!-- Dropdown Menu -->
+          <div
+            x-show="dropdown"
+            x-transition
+            class="absolute left-0 mt-2 bg-white shadow-md rounded-md w-48"
+          >
+            <a
+              href="#option1"
+              class="block px-4 py-2 text-black-500 hover:bg-orange-100"
+              >Option 1</a
+            >
+            <a
+              href="#option2"
+              class="block px-4 py-2 text-black-500 hover:bg-orange-100"
+              >Option 2</a
+            >
+            <a
+              href="#option3"
+              class="block px-4 py-2 text-black-500 hover:bg-orange-100"
+              >Option 3</a
+            >
+            <a
+              href="#option4"
+              class="block px-4 py-2 text-black-500 hover:bg-orange-100"
+              >Option 4</a
+            >
+          </div>
+        </li>
+
+        <li
+          class="relative"
+          x-data="{ dropdown: false }"
+          @mouseenter="dropdown = true"
+          @mouseleave="dropdown = false"
+        >
+          <button
+            class="text-black-500 font-title text-base font-bold hover:text-orange-500 flex items-center"
+          >
+            SOMMERHØJSKOLE
+            <svg
+              class="ml-2 w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <!-- Dropdown Menu -->
+          <div
+            x-show="dropdown"
+            x-transition
+            class="absolute left-0 mt-2 bg-white shadow-md rounded-md w-48"
+          >
+            <a
+              href="#option1"
+              class="block px-4 py-2 text-black-500 hover:bg-orange-100"
+              >Option 1</a
+            >
+            <a
+              href="#option2"
+              class="block px-4 py-2 text-black-500 hover:bg-orange-100"
+              >Option 2</a
+            >
+            <a
+              href="#option3"
+              class="block px-4 py-2 text-black-500 hover:bg-orange-100"
+              >Option 3</a
+            >
+            <a
+              href="#option4"
+              class="block px-4 py-2 text-black-500 hover:bg-orange-100"
+              >Option 4</a
+            >
+          </div>
+        </li>
+
+        <li
+          class="relative"
+          x-data="{ dropdown: false }"
+          @mouseenter="dropdown = true"
+          @mouseleave="dropdown = false"
+        >
+          <button
+            class="text-black-500 font-title text-base font-bold hover:text-orange-500 flex items-center"
+          >
+            OM OS
+            <svg
+              class="ml-2 w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <!-- Dropdown Menu -->
+          <div
+            x-show="dropdown"
+            x-transition
+            class="absolute left-0 mt-2 bg-white shadow-md rounded-md w-48"
+          >
+            <a
+              href="#option1"
+              class="block px-4 py-2 text-black-500 hover:bg-orange-100"
+              >Option 1</a
+            >
+            <a
+              href="#option2"
+              class="block px-4 py-2 text-black-500 hover:bg-orange-100"
+              >Option 2</a
+            >
+            <a
+              href="#option3"
+              class="block px-4 py-2 text-black-500 hover:bg-orange-100"
+              >Option 3</a
+            >
+            <a
+              href="#option4"
+              class="block px-4 py-2 text-black-500 hover:bg-orange-100"
+              >Option 4</a
+            >
+          </div>
+        </li>
+        <li
+          class="relative"
+          x-data="{ dropdown: false }"
+          @mouseenter="dropdown = true"
+          @mouseleave="dropdown = false"
+        >
+          <button
+            class="text-black-500 font-title text-base font-bold hover:text-orange-500 flex items-center"
+          >
+            TILMELD
+            <svg
+              class="ml-2 w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <!-- Dropdown Menu -->
+          <div
+            x-show="dropdown"
+            x-transition
+            class="absolute left-0 mt-2 bg-white shadow-md rounded-md w-48"
+          >
+            <a
+              href="#option1"
+              class="block px-4 py-2 text-black-500 hover:bg-orange-100"
+              >Option 1</a
+            >
+            <a
+              href="#option2"
+              class="block px-4 py-2 text-black-500 hover:bg-orange-100"
+              >Option 2</a
+            >
+            <a
+              href="#option3"
+              class="block px-4 py-2 text-black-500 hover:bg-orange-100"
+              >Option 3</a
+            >
+            <a
+              href="#option4"
+              class="block px-4 py-2 text-black-500 hover:bg-orange-100"
+              >Option 4</a
+            >
+          </div>
+        </li>
+        <li>
+          <a
+            href="#tilmeld"
+            class="text-black-500 font-title text-base font-bold hover:text-orange-500"
+            >PRISER</a
+          >
+        </li>
+        <li>
+          <a
+            href="#infomoeder"
+            class="text-black-500 font-title text-base font-bold hover:text-orange-500"
+            >INFOMØDER</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Icons aligned right -->
+    <div class="hidden lg:flex flex-row ml-4 space-x-4">
+      <a href="index.html"
+        ><img src="/svg/Facebook.svg" alt="hjem" class="h-6" /></a
+      >
+      <a href="index.html"
+        ><img src="/svg/Instagram.svg" alt="hjem" class="h-6" /></a
+      >
+      <a href="index.html"
+        ><img src="/svg/TikTok.svg" alt="hjem" class="h-6" /></a
+      >
+    </div>
+
+    <!-- Burger Menu Button for Mobile -->
+    <button
+      id="burgermenu"
+      class="ml-auto lg:hidden z-30 text-black-500 focus:outline-none"
+      x-on:click="showmenu = !showmenu"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+  </div>
+
+  <nav
+    id="mobilmenu"
+    class="lg:hidden bg-black-500 flex z-20 flex-col items-center w-full py-4 space-y-4 border-t border-white"
+    x-show="showmenu"
+    x-transition
+    x-on:click="showmenu = false"
+    x-on:click.outside="showmenu = false"
+  >
+    <!-- Skjult tilstand indtil åbnet -->
     <ul class="w-full">
-        <li class="text-center py-xxs">
-            <a href="#hjem" class="text-black-50 font-title text-base font-bold hover:text-orange-500">HØJSKOLEOPHOLD</a> 
-        </li>
-        <li class="text-center py-xxs">
-            <a href="#hjem" class="text-black-50 font-title text-base font-bold hover:text-orange-500">SOMMERHØJSKOLE</a> 
-        </li>
-        <li class="text-center py-xxs">
-            <a href="#hjem" class="text-black-50 font-title text-base font-bold hover:text-orange-500">PRISER</a> 
-        </li>
-        <li class="text-center py-xxs">
-            <a href="#hjem" class="text-black-50 font-title text-base font-bold hover:text-orange-500">OM OS</a> 
-        </li>
-        <li class="text-center py-xxs">
-            <a href="#hjem" class="text-black-50 font-title text-base font-bold hover:text-orange-500">TILMELD</a> 
-        </li>
-        <li class="text-center py-xxs">
-            <a href="#hjem" class="text-black-50 font-title text-base font-bold hover:text-orange-500">INFOMØDER</a> 
-        </li>
+      <li class="text-center py-xxs">
+        <a
+          href="#hjem"
+          class="text-black-50 font-title text-base font-bold hover:text-orange-500"
+          >HØJSKOLEOPHOLD</a
+        >
+      </li>
+      <li class="text-center py-xxs">
+        <a
+          href="#hjem"
+          class="text-black-50 font-title text-base font-bold hover:text-orange-500"
+          >SOMMERHØJSKOLE</a
+        >
+      </li>
+      <li class="text-center py-xxs">
+        <a
+          href="#hjem"
+          class="text-black-50 font-title text-base font-bold hover:text-orange-500"
+          >PRISER</a
+        >
+      </li>
+      <li class="text-center py-xxs">
+        <a
+          href="#hjem"
+          class="text-black-50 font-title text-base font-bold hover:text-orange-500"
+          >OM OS</a
+        >
+      </li>
+      <li class="text-center py-xxs">
+        <a
+          href="#hjem"
+          class="text-black-50 font-title text-base font-bold hover:text-orange-500"
+          >TILMELD</a
+        >
+      </li>
+      <li class="text-center py-xxs">
+        <a
+          href="#hjem"
+          class="text-black-50 font-title text-base font-bold hover:text-orange-500"
+          >INFOMØDER</a
+        >
+      </li>
     </ul>
-</nav>
+  </nav>
 </div>
