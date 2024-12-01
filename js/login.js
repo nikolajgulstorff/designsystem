@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="bg-orange-200 p-8 max-w-sm w-full rounded-md shadow-md">
         <h1 class="text-center text-2xl font-bold mb-4">Login</h1>
         <p class="text-center text-sm mb-2">This is a school project</p>
-        <p class="text-center text-sm mb-6">The password is <code class="bg-orange-900 p-1 rounded">hojskolendkkeakk</code></p>
+        <p class="text-center text-sm mb-6">Enter password below <code class="bg-orange-900 p-1 rounded"></code></p>
         <form class="space-y-4">
           <input 
             type="password" 
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const passwordInput = form.querySelector("input[name=pass]").value;
 
       // Check password
-      if (passwordInput === "hojskolendkkeakk") {
+      if (passwordInput === "hojskolendkkea") {
         div.remove();  // Remove modal
         document.body.style.overflow = "auto";  // Unlock scroll
         localStorage.setItem("iform-totally-logged-in", true);  // Save login state
