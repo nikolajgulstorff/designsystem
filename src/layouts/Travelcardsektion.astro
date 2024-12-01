@@ -1,0 +1,125 @@
+---
+import Travelcard from "../components/Travelcard.astro"
+import Button from "../components/Button.astro"
+---
+
+<div class="bg-orange-50 p-4 md:p-8 lg:pt-xl"> <!-- bg-orange-200 pt-ml py-lg px-ml lg:px-xl -->
+    <h1 class="text-blue-800 pb-m font-extrabold font-title text-medium text-center md:text-medium lg:text-large xl:text-xlarge">ER DU KLAR TIL DIT LIVS EVENTYR?</h1>
+    <div x-data="{ currentIndex: 0, cardWidth: 355, totalCards: 7 }" class="relative overflow-hidden"><div 
+        class="flex transition-transform duration-500"
+        :style="`transform: translateX(-${currentIndex * cardWidth}px);`"
+      >
+        <!-- Cards go here -->
+        <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/4 px-2" x-show="true">
+            <Travelcard
+            img="../img/aus_ballon.webp"
+            lande="Australien"
+            lande1="Japan"
+            lande2="Bali"
+            lande3="Gili Islands"
+            />
+          </div>
+          <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/4 px-2">
+            <Travelcard
+            img="../img/cos_salt.webp"
+            lande="Costa Rico"
+            lande1="Guatemala"
+            lande2="Colombia"
+            lande3="Mexico"
+            />
+          </div>
+          <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/4 px-2">
+            <Travelcard
+            img="../img/brz.webp"
+            lande="Brazilien"
+            lande1="Argentina"
+            lande2="Colombia"
+            lande3="Ecuador"
+            lande4="Bolivia"
+            lande5="Peru"
+            />
+          </div>
+          <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/4 px-2">
+            <Travelcard
+            img="../img/maldiverne.webp"
+            lande="Maldiverne"
+            lande1="Sri Lanka"
+            lande2="Bali"
+            lande3="Gili Islands"
+            />
+            </div>
+            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/4 px-2">
+                <Travelcard
+                img="../img/nz.webp"
+                lande="Australien"
+                lande1="NZ"
+                lande2="Gili Islands"
+                lande3="Bali"
+                />
+            </div>
+            <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/4 px-2">
+                <Travelcard
+                img="../img/ny.webp"
+                lande="New York"
+                lande1="Caribien"
+                lande2="Hawaii"
+                lande3="Mexico"
+                />
+          </div>
+          <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/4 px-2">
+            <Travelcard
+            img="../img/nepal.webp"
+            lande="Indien"
+            lande1="Nepal"
+            lande2="Sri Lanka"
+            lande3="Vietnam"
+            />
+        </div>
+        <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/4 px-2">
+            <Travelcard
+            img="../img/hawaii.webp"
+            lande="Hawaii"
+            lande1="Australien"
+            lande2="Japan"
+            lande3="Bali"
+            lande4="Gili Islands"
+            />
+        </div>
+        <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/4 px-2">
+            <Travelcard
+            img="../img/bali.webp"
+            lande="Lom Bok"
+            lande1="Gili Islands"
+            />
+        </div>
+        <div class="flex-shrink-0 w-full md:w-1/2 lg:w-1/4 px-2">
+            <Travelcard
+            img="../img/infomode.webp"
+            />
+        </div>
+       
+        <!-- Additional cards here -->
+      </div>
+  
+      <!-- Navigation Controls -->
+      <button 
+      @click="currentIndex = (currentIndex === 0) ? totalCards - 1 : currentIndex - 1"  
+      class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-blue-800 text-white p-3 rounded-full shadow-lg"
+    >
+      <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+    <button 
+      @click="currentIndex = (currentIndex + 1) % totalCards"
+      class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-blue-800 text-white p-3 rounded-full shadow-lg"
+    >
+      <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+    </div>
+    <div class="flex items-center justify-center mt-ml">
+    <Button variant="primary" size="medium">Læs flere andmeldelser</Button>
+  </div>
+  </div>
